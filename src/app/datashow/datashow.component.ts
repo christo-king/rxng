@@ -7,23 +7,20 @@ import {DataReceiver} from "../datareceiver";
     styleUrls: ['./datashow.component.css']
 })
 export class DatashowComponent extends DataReceiver implements OnInit {
+    @Input() data: any = {}
+
     properties: object[] = []
 
     constructor() {
         super()
     }
 
-    setData(data) {
-        if (data) {
-            for (var key in data) {
-                this.properties.push({name: key, value: data[key]})
+    ngOnInit() {
+        if (this.data) {
+            for (var key in this.data) {
+                this.properties.push({name: key, value: this.data[key]})
             }
         }
-        return this.properties
-    }
-
-    ngOnInit() {
-
     }
 
 }

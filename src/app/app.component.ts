@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {NavbarComponent} from "./navbar/navbar.component";
 import {DataReceiver} from "./datareceiver";
 
@@ -7,9 +7,6 @@ import {DataReceiver} from "./datareceiver";
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css']
 })
-export class AppComponent extends DataReceiver{
+export class AppComponent extends DataReceiver {
     title = 'Initial Page';
-
-    data: object = {}
-
 }

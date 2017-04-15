@@ -9,7 +9,7 @@ export class DataService {
 
     getData(receiver) {
         let self = this
-        this._http.get("https://jsonplaceholder.typicode.com/posts/1").subscribe(
+        this._http.get("https://jsonplaceholder.typicode.com/posts/").subscribe(
             (data) => receiver.setData(data.json()),
             (err) => console.log(err)
         )

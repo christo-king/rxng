@@ -11,12 +11,14 @@ import { NavbarComponent } from './navbar/navbar.component'
 import {DataService} from "./app.service";
 import { DatashowComponent } from './datashow/datashow.component';
 import {MdIconRegistry} from "@angular/material";
+import { DatagroupComponent } from './datagroup/datagroup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    DatashowComponent
+    DatashowComponent,
+    DatagroupComponent
   ],
   imports: [
     BrowserModule,

@@ -2,5 +2,5 @@
     <a href="#menu" class="box-shadow-menu" (click)="navbar.toggle()"></a>
     <h1>{{title}}</h1>
 </md-toolbar>
-<app-navbar [receiver]="datashow" #navbar></app-navbar>
-<app-datashow #datashow></app-datashow>
+<app-navbar [receiver]="this" #navbar></app-navbar>
+<app-datagroup [datagroup]="data"></app-datagroup>

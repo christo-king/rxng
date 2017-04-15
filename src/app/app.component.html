@@ -1,3 +1,6 @@
-<h1>
-  {{title}}
-</h1>
+<md-toolbar>
+    <a href="#menu" class="box-shadow-menu" (click)="navbar.toggle()"></a>
+    <h1>{{title}}</h1>
+</md-toolbar>
+<app-navbar [receiver]="datashow" #navbar></app-navbar>
+<app-datashow #datashow></app-datashow>

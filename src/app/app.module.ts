@@ -4,17 +4,31 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import {AppMaterialModule} from './app.material'
+
+import 'hammerjs';
+import { NavbarComponent } from './navbar/navbar.component'
+import {DataService} from "./app.service";
+import { DatashowComponent } from './datashow/datashow.component';
+import {MdIconRegistry} from "@angular/material";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent,
+    DatashowComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppMaterialModule
   ],
-  providers: [],
+  providers: [MdIconRegistry, DataService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(mdIconRegistry: MdIconRegistry) {
+    mdIconRegistry.registerFontClassAlias('material', 'material-icons');
+  }
+}
